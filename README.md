@@ -35,7 +35,7 @@ To run tests
 ```sh
 npm run test
 ```
-#### Note: A local mongodb instance needs to running at PORT 27017 to execute all tests
+#### Note: A local mongodb instance needs to be running at PORT 27017 to execute some of the tests
 To Format
 ```sh
 npm run format
@@ -77,14 +77,14 @@ npm run lint
 }
 ```
 
-## Project Structure (inside src)
-### config - Extracts and stores env variables
-### controllers - Deals with express req/res, validates request, calls services
-### models - Data access layer, mongoose models are defined here
-### routes - Hierarchical route definations, maps routes to controllers
-### services - Stores business logic, interacts with models
-### utils - Stores helper functions and classes
-### validations - Stores Joi schema objects, for request validaitons
-### app.ts - Defines express app, initializes middlewares and routes
-### server.ts - Entry point, connects database and starts server
-### types.ts - Stores typescript type definations
+## Project Structure (inside src folder)
+#### config - Extracts and stores env variables
+#### controllers - Deals with express req/res, validates request, calls services
+#### models - Data access layer, mongoose models are defined here
+#### routes - Hierarchical route definations, maps routes to controllers
+#### services - Stores business logic, interacts with models
+#### utils - Stores helper functions and classes
+#### validations - Stores Joi schema objects, for request validaitons
+#### app.ts - Defines express app, initializes middlewares and routes
+#### server.ts - Entry point, connects database and starts server
+#### types.ts - Stores typescript type definations
