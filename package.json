@@ -29,7 +29,8 @@
     "joi": "^17.5.0",
     "mongoose": "^6.1.4",
     "pino": "^7.6.2",
-    "pino-http": "^6.5.0"
+    "pino-http": "^6.5.0",
+    "tslib": "^1.14.1"
   },
   "devDependencies": {
     "@types/cors": "^2.8.12",
