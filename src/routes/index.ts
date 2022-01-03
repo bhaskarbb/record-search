@@ -1,7 +1,8 @@
 import { Application, NextFunction, Request, Response } from 'express';
 import { logger, ErrorObject, ResponseObject, ErrorCode } from '../utils';
+import { RecordRouter } from './record';
 
-const routes = [];
+const routes = [{ path: '/records/', router: RecordRouter }];
 
 /**
  * Boilerplate to initialize project routes, add a health check route,
