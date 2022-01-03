@@ -7,7 +7,7 @@
     "test": "jest --config jest.config.js",
     "dev": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/server.ts | pino-pretty",
     "build": "rm -rf dist && tsc",
-    "serve": "node dist/server.js",
+    "start": "node dist/server.js",
     "format": "prettier --write 'src/**/*.ts'",
     "lint": "tslint -p tsconfig.json"
   },
