@@ -27,9 +27,11 @@ export function initializeRoutes(app: Application) {
   });
 
   app.use((error: Error, request: Request, response: Response, next: NextFunction) => {
+    let errorObject
+
     // Invalid JSON Body
     if (error instanceof SyntaxError) {
-      const errorObject = new ErrorObject(ErrorCode.VALIDATION_ERROR, 'Invalid JSON body');
+      errorObject = new ErrorObject(ErrorCode.VALIDATION_ERROR, 'Invalid JSON body');
       return response.json(errorObject);
     }
 
@@ -41,7 +43,7 @@ export function initializeRoutes(app: Application) {
 
     // Uncaught Error
     logger.fatal(`Uncaught Error: ${error.message}`, { stackTrace: error.stack });
-    const errorObject = new ErrorObject(ErrorCode.INTERNAL_SERVER_ERROR, 'Internal Server Error');
+    errorObject = new ErrorObject(ErrorCode.INTERNAL_SERVER_ERROR, 'Internal Server Error');
     return response.json(errorObject);
   });
 }
