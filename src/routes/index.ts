@@ -27,7 +27,7 @@ export function initializeRoutes(app: Application) {
   });
 
   app.use((error: Error, request: Request, response: Response, next: NextFunction) => {
-    let errorObject
+    let errorObject;
 
     // Invalid JSON Body
     if (error instanceof SyntaxError) {
