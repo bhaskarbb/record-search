@@ -45,6 +45,7 @@ To Lint
 npm run lint
 ```
 
+
 ## API
 ### Endpoint: /records/
 ### Method: POST
@@ -77,6 +78,20 @@ npm run lint
 }
 ```
 
+
+## Response Status Codes
+```js
+{
+  SUCCESS = 0,
+  VALIDATION_ERROR = 1,
+  AUTHENTICATION_ERROR = 2,
+  AUTHORIZATION_ERROR = 3,
+  NOT_FOUND = 4,
+  INTERNAL_SERVER_ERROR = 5,
+}
+```
+
+
 ## Project Structure (inside src folder)
 #### config - Extracts and stores env variables
 #### controllers - Deals with express req/res, validates request, calls services
@@ -88,3 +103,4 @@ npm run lint
 #### app.ts - Defines express app, initializes middlewares and routes
 #### server.ts - Entry point, connects database and starts server
 #### types.ts - Stores typescript type definations
+
