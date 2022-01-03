@@ -23,7 +23,7 @@ export async function search(searchParams: RecordSearchParams) {
     },
     {
       $match: {
-        createdAt: { $gte: new Date(startDate), $lte: new Date(endDate) },
+        createdAt: { $gte: startDate, $lte: endDate },
         totalCount: { $gte: minCount, $lte: maxCount },
       },
     },
