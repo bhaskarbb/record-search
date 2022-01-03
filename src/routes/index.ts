@@ -7,6 +7,8 @@ const routes = [{ path: '/records/', router: RecordRouter }];
 /**
  * Boilerplate to initialize project routes, add a health check route,
  * and handle errors
+ * Note: Since we have defined our own ErrorCode convention, every response
+ * will return with status code 200, including errors
  */
 export function initializeRoutes(app: Application) {
   routes.forEach((route) => {
